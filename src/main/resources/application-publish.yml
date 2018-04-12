@@ -1,0 +1,9 @@
+server:
+  port: 80
+  servlet:
+    context-path: /springbootdemo
+
+url:
+  imageurl: www.x.com
+  fileurl: img.x.com
+content: "${url.imageurl} + ${url.fileurl}"
