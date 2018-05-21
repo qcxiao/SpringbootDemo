@@ -2,6 +2,9 @@ package top.qcxiao.springbootdemo.accumulate.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Stack;
 
 public class Apple {
     private int price;
@@ -21,7 +24,6 @@ public class Apple {
         Apple apple = new Apple();
         apple.setPrice(5);
         System.out.println("Apple Price:" + apple.getPrice());
-
 
         /**
          * 使用反射调用

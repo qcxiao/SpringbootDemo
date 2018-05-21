@@ -1,9 +1,9 @@
-package top.qcxiao.springbootdemo.config;
+package top.qcxiao.springbootdemo.springboot.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import top.qcxiao.springbootdemo.interceptors.EncodingInterceptor;
+import top.qcxiao.springbootdemo.springboot.interceptors.EncodingInterceptor;
 
 /**
  * 适配器

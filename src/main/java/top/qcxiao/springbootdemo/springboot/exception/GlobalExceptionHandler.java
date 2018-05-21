@@ -1,11 +1,10 @@
-package top.qcxiao.springbootdemo.exception;
+package top.qcxiao.springbootdemo.springboot.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
-import top.qcxiao.springbootdemo.common.ResponseCode;
-import top.qcxiao.springbootdemo.common.ServerResponse;
+import top.qcxiao.springbootdemo.springboot.common.ServerResponse;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

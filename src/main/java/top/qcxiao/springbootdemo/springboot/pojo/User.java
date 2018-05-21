@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.pojo;
+package top.qcxiao.springbootdemo.springboot.pojo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

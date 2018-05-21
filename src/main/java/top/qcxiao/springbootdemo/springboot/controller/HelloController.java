@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.controller;
+package top.qcxiao.springbootdemo.springboot.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import top.qcxiao.springbootdemo.pojo.Url;
+import top.qcxiao.springbootdemo.springboot.pojo.Url;
 
 @RestController
 @Slf4j

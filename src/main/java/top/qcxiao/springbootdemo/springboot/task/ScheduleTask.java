@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.task;
+package top.qcxiao.springbootdemo.springboot.task;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

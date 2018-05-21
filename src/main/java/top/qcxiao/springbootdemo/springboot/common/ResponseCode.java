@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.common;
+package top.qcxiao.springbootdemo.springboot.common;
 
 
 public enum ResponseCode {

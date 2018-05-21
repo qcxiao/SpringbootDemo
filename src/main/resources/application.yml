@@ -3,9 +3,9 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.33:3306/springbootdemo
-    username: yaodao
-    password: yaodao
+    url: jdbc:mysql://localhost:3306/springbootdemo?useSSL=true
+    username: root
+    password: 123456
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html

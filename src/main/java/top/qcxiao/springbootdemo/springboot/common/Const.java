@@ -1,7 +1,6 @@
-package top.qcxiao.springbootdemo.common;
+package top.qcxiao.springbootdemo.springboot.common;
 
 import com.google.common.collect.Sets;
-
 import java.util.Set;
 
 

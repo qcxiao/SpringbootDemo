@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.controller;
+package top.qcxiao.springbootdemo.springboot.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
