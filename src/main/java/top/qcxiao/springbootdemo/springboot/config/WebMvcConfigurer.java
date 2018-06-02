@@ -7,6 +7,7 @@ import top.qcxiao.springbootdemo.springboot.interceptors.EncodingInterceptor;
 
 /**
  * 适配器
+ * 注入自定义拦截器
  */
 @Configuration
 public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
@@ -15,8 +16,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
         /**
          * 配置拦截器
          */
-
-        registry.addInterceptor(new EncodingInterceptor()).addPathPatterns("/*/**");
+        registry.addInterceptor(new EncodingInterceptor()).addPathPatterns("/*");
         super.addInterceptors(registry);
     }
 }

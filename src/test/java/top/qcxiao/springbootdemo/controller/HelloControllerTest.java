@@ -26,13 +26,24 @@ public class HelloControllerTest {
 
     @Before
     public void before(){
-        // 安装独立测试
-        //mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();//指定controller类
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();//泛指应用的所有上下文
+        /**
+         * 安装独立测试
+         */
+        //指定controller类
+        //mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
+        //泛指应用的所有上下文，推荐使用
+        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
     @Test
-    public void test() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.post("/hello").accept(MediaType.ALL)).andDo(print());
+    public void hello() throws Exception{
+        mockMvc.perform(MockMvcRequestBuilders.post("/hello").accept(MediaType.APPLICATION_JSON_UTF8)).andDo(print());
+    }
+
+    @Test
+    public void saveUser() throws Exception{
+        mockMvc.perform(MockMvcRequestBuilders.post("/saveUser")
+                .param("username", "h")).andDo(print());
+
     }
 }

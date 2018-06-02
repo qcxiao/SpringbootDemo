@@ -9,6 +9,9 @@ import top.qcxiao.springbootdemo.springboot.common.ServerResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 全局异常处理器
+ */
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {

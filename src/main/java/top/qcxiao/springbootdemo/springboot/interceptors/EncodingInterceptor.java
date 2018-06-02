@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 
+/**
+ * 自定义拦截器
+ */
 @Slf4j
 public class EncodingInterceptor implements HandlerInterceptor {
 
@@ -24,7 +27,7 @@ public class EncodingInterceptor implements HandlerInterceptor {
      */
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object object) throws Exception {
-        log.info("preHandle");
+        log.info("用户:{},IP:{}, 访问资源路径:{}", request.getRequestURI(), request.getRemoteUser(), request.getRemoteAddr());
         return true;
     }
 
