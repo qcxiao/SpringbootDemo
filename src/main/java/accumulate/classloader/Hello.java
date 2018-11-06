@@ -1,4 +1,4 @@
-package accumulate.classload;
+package accumulate.classloader;
 
 public class Hello {
     public void sayHello() {

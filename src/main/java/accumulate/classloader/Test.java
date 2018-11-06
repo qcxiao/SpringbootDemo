@@ -1,11 +1,11 @@
-package accumulate.classload;
+package accumulate.classloader;
 
 /**
  * Class.forname()与ClassLoader.loadClass()的区别
  */
 public class Test {
     public static void main(String[] args) throws ClassNotFoundException {
-        Test.class.getClassLoader().loadClass("accumulate.classload.Test");
+        Test.class.getClassLoader().loadClass("accumulate.classloader.Test");
 
 
         ClassLoader classLoader = Test.class.getClassLoader();

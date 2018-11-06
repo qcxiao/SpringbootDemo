@@ -53,7 +53,7 @@ public class RandomUtil {
 		return sb.toString();
 	}
 	
-	private static String randomLongNumberString(int length) {
+	public static String randomLongNumberString(int length) {
 		StringBuilder sb = new StringBuilder(length);
 		for(int i=0; i<length; i++){
 			int num = random.nextInt(10);
@@ -64,7 +64,7 @@ public class RandomUtil {
 
 	
 	public static void main(String[] args) {
-		System.out.println(randomNumberString(10));
+		System.out.println(randomLongNumberString(10));
 	}
 	
 }
