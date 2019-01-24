@@ -2,7 +2,6 @@ package accumulate.hotswap.agentmain.utils;
 
 import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Opcodes;
-
 import static jdk.internal.org.objectweb.asm.Opcodes.GETSTATIC;
 import static jdk.internal.org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
 

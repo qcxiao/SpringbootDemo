@@ -13,7 +13,7 @@ import java.util.Map;
  */
 @Slf4j
 public class WrapperTest {
-    Map<String, List<String>> map = new HashMap<>();
+    Map<String, List<String>> map = new HashMap<String, List<String>>();
 
 
     public static void main(String[] args) {

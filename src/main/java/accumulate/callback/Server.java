@@ -9,7 +9,7 @@ public class Server {
 
         // 模拟服务端需要对数据处理
         try {
-            Thread.sleep(15 * 1000);
+            Thread.sleep(5 * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -27,6 +27,11 @@ public class Client implements CSCallBack {
     }
 
     public void asynchronizationTest() {
+        try {
+            Thread.sleep(1 * 100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         log.info("【客户端】执行正常逻辑");
     }
 }

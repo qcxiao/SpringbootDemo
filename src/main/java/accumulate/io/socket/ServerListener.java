@@ -1,4 +1,4 @@
-package accumulate.socket;
+package accumulate.io.socket;
 
 import javax.swing.*;
 import java.io.IOException;
