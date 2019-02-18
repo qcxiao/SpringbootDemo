@@ -3,7 +3,9 @@ package springboot.exception;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import springboot.common.ErrorMessage;
 import springboot.common.ServerResponse;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,21 +17,38 @@ import javax.servlet.http.HttpServletResponse;
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
-    public static final String GLOBAL_ERROR_VIEW = "error";
 
-    @ExceptionHandler(value = Exception.class)
-    public Object errorHandler(HttpServletRequest request, HttpServletResponse response,
-                               Exception e){
-        e.printStackTrace();
-        log.error("URL：{}，exception：{}", request.getRequestURL(), e.getMessage());
-        if (isAjax(request)) {
-            return ServerResponse.exception(555, e.getMessage());
-        } else {
-            ModelAndView mav = new ModelAndView();
-            mav.addObject("excetion", e);
-            mav.setViewName(GLOBAL_ERROR_VIEW);
-            return mav;
-        }
+    @ExceptionHandler(SessionNotFoundException.class)
+    @ResponseBody
+    public ErrorMessage<String> sessionNotFoundExceptionHandler(HttpServletRequest request, SessionNotFoundException exception) throws Exception {
+        return handleErrorInfo(request, exception.getMessage(), exception);
+    }
+
+    @ExceptionHandler(NullOrEmptyException.class)
+    @ResponseBody
+    public ErrorMessage<String> nullOrEmptyExceptionHandler(HttpServletRequest request, NullOrEmptyException exception) throws Exception {
+        return handleErrorInfo(request, exception.getMessage(), exception);
+    }
+
+    @ExceptionHandler(IllegalPropertiesException.class)
+    @ResponseBody
+    public ErrorMessage<String> illegalPropExceptionHandler(HttpServletRequest request, IllegalPropertiesException exception) throws Exception {
+        return handleErrorInfo(request, exception.getMessage(), exception);
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseBody
+    public ErrorMessage<String> exceptionHandler(HttpServletRequest request, Exception exception) throws Exception {
+        return handleErrorInfo(request, exception.getMessage(), exception);
+    }
+
+    private ErrorMessage<String> handleErrorInfo(HttpServletRequest request, String message, Exception exception) {
+        ErrorMessage<String> errorMessage = new ErrorMessage<>();
+        errorMessage.setMessage(message);
+        errorMessage.setCode(ErrorMessage.ERROR);
+        errorMessage.setData(message);
+        errorMessage.setUrl(request.getRequestURL().toString());
+        return errorMessage;
     }
 
 

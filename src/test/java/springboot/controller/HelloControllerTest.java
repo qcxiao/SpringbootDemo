@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo.controller;
+package springboot.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +12,8 @@ import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+import springboot.controller.HelloController;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @SpringBootTest
@@ -30,9 +32,9 @@ public class HelloControllerTest {
          * 安装独立测试
          */
         //指定controller类
-        //mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
         //泛指应用的所有上下文，推荐使用
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+        //mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
     @Test

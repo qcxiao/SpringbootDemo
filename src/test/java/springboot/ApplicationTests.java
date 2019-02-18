@@ -1,4 +1,4 @@
-package top.qcxiao.springbootdemo;
+package springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
