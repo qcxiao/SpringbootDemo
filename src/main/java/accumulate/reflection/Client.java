@@ -10,9 +10,9 @@ import java.lang.reflect.Method;
 public class Client {
     public static void main(String[] args) throws Exception {
         Class<People> cls = People.class;
-        Field name = cls.getField("name");
-        People people = new People();
-        name.set(people,"hello");
+        Field field = cls.getField("name");
+        People people = cls.newInstance();
+        field.set(people,"hello");
         System.out.println(people.name);
 
 

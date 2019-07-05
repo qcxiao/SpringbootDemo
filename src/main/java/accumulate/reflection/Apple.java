@@ -1,4 +1,4 @@
-package accumulate.reflect;
+package accumulate.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
@@ -26,7 +26,7 @@ public class Apple {
          * 使用反射调用
          */
         // 通过完整类名反射出类对象
-        Class clz = Class.forName("accumulate.reflect.Apple");
+        Class clz = Class.forName("accumulate.reflection.Apple");
         // 获取set方法对象
         Method setPriceMethod = clz.getMethod("setPrice", int.class);
         // 获取构造方法对象

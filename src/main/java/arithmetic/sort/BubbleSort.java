@@ -1,4 +1,4 @@
-package arithmetic._1.sort;
+package arithmetic.sort;
 
 import com.google.common.primitives.Bytes;
 import com.google.common.primitives.Ints;
@@ -72,7 +72,8 @@ public class BubbleSort {
 
 
     /**
-     * 对于部分有序的序列进行排序，如:[2,4,3,1,5,6,7,8]，后面部分已经有序了，所以只需要比较到无序的边界即可，当排序近乎有序的一组数时此优化作用更明显
+     * 对于部分有序的序列进行排序，如:[2,4,3,1,5,6,7,8]，后面部分已经有序了，
+     * 所以只需要比较到无序的边界即可，当排序近乎有序的一组数时此优化作用更明显
      * @param array
      */
     private static void optimizeBubbleSort2(int array[]) {
