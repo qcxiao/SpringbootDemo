@@ -1,8 +1,9 @@
-package accumulate.jvm.controller;
+package springboot.controller.jvm;
 
-import accumulate.jvm.DeadLock;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springboot.controller.jvm.DeadLock;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -12,10 +13,12 @@ import java.util.concurrent.Executors;
  * @Date: 2018/11/8 16:12
  */
 @RestController
+@Slf4j
 public class DeadLockController {
 
     @RequestMapping("deadLock")
     public void deadlock(){
+        log.info("enter into deadLock...");
         Object obj1 = new Object();
         Object obj2 = new Object();
 

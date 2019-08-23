@@ -1,4 +1,4 @@
-package accumulate.jvm;
+package springboot.controller.jvm;
 
 import java.io.IOException;
 import java.io.InputStream;
