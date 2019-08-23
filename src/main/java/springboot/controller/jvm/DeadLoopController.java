@@ -18,9 +18,9 @@ public class DeadLoopController {
 
     @RequestMapping("deadLoop")
     public void deadLoop() {
+        log.warn("enter into deadLoop...");
         while (true){
             str = new String();
-            log.warn("deadLoop");
         }
     }
 }
