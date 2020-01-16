@@ -13,8 +13,8 @@
 //@Slf4j
 //public class JVMTIThread {
 //    public static void main(String[] args) throws Exception {
-//        List<VirtualMachineDescriptor> list = VirtualMachine.list();
-//        for (VirtualMachineDescriptor vmd : list) {
+//        List<VirtualMachineDescriptor> linked_list = VirtualMachine.linked_list();
+//        for (VirtualMachineDescriptor vmd : linked_list) {
 //            if (vmd.displayName().endsWith("Consumer")) {
 //                VirtualMachine virtualMachine = VirtualMachine.attach(vmd.id());
 //                virtualMachine.loadAgent("/Users/qcxiao/like/springbootdemo/src/main/java/accumulate/hotswap/agentmain/jar/agentmain.jar", "cxs");

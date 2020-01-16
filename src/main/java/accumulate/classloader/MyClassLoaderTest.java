@@ -17,7 +17,7 @@ import java.util.Map;
 public class MyClassLoaderTest {
 
     @SuppressWarnings("rawtypes")
-    private static Map<String, Class> map = new HashMap<String, Class>();
+    private static Map<String, Class> map = new HashMap<>();
 
     public static class ReLaunchClassLoader extends URLClassLoader {
         public ReLaunchClassLoader(URL[] urls, ClassLoader cls) {
@@ -26,7 +26,7 @@ public class MyClassLoaderTest {
 
         @Override
         public Class<?> loadClass(String name) throws ClassNotFoundException {
-            if (map.get(name) != null) {//@e
+            if (map.get(name) != null) {
                 System.out.println("load classcache from map name:" + name);
                 return map.get(name);
             }
@@ -63,13 +63,13 @@ public class MyClassLoaderTest {
                 String path = classNameToPath(name);
                 URL url = new URL(path);
                 byte[] buff = new byte[1024 * 4];
-                int len = -1;
+                int len;
                 is = url.openStream();
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                ByteArrayOutputStream os = new ByteArrayOutputStream();
                 while ((len = is.read(buff)) != -1) {
-                    baos.write(buff, 0, len);
+                    os.write(buff, 0, len);
                 }
-                return baos.toByteArray();
+                return os.toByteArray();
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -94,7 +94,7 @@ public class MyClassLoaderTest {
     public static void loadClass(File file, String className) throws Exception {
         ModuleClassLoader mcl = new ModuleClassLoader(new URL[]{file.toURL()}, null);
         Class cls = mcl.loadClass(className);
-        map.put(cls.getName(), cls);//@d
+        map.put(cls.getName(), cls);
 
     }
 
