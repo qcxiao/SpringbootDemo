@@ -1,15 +1,7 @@
 import accumulate.http.HttpRequest;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart;
-import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeMultipart;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import org.apache.commons.io.FileUtils;
 import org.junit.Test;
-
-import javax.activation.DataHandler;
-import javax.activation.FileDataSource;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +31,7 @@ public class MonitorTest {
             for (int i = 0; i < 20; i++) {
                 if (!nodeNames.get(i).equals(origin[i])) {
                     System.out.println("发生变化了.");
-                    System.out.println(nodeNames.subList(0, 10));
+                    System.out.println(nodeNames.subList(0, 20));
                     flag = false;
                     break;
                 }
